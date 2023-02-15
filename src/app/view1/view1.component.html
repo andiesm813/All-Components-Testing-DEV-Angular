@@ -1,0 +1,364 @@
+<div class="column-layout group">
+  <div class="row-layout group_1">
+    <igx-card type="outlined" class="card">
+      <igx-card-media height="200px">
+        <img src="https://images.unsplash.com/photo-1503259901638-6bf44a4cd670?ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODR8fGNvbG9yZnVsJTIwYWJzdHJhY3QlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" class="image" />
+      </igx-card-media>
+      <igx-card-header>
+        <h3 igxCardHeaderTitle>
+          Title goes here...
+        </h3>
+        <h5 igxCardHeaderSubtitle>
+          Subtitle goes here...
+        </h5>
+      </igx-card-header>
+      <igx-card-content class="body-content">
+        <p class="content">
+          Body 1
+        </p>
+      </igx-card-content>
+      <igx-card-actions class="actions-content">
+        <button igxButton="flat" igxRipple class="user-input">
+          Button
+        </button>
+        <button igxButton="icon" igxRipple>
+          <igx-icon>
+            favorite
+          </igx-icon>
+        </button>
+        <button igxButton="icon" igxRipple>
+          <igx-icon>
+            bookmark
+          </igx-icon>
+        </button>
+        <button igxButton="icon" igxRipple>
+          <igx-icon>
+            share
+          </igx-icon>
+        </button>
+      </igx-card-actions>
+    </igx-card>
+    <div class="column-layout group_2">
+      <igx-expansion-panel [collapsed]="false" class="expansion-panel">
+        <igx-expansion-panel-body>
+          <p class="content">
+            Body 1
+          </p>
+        </igx-expansion-panel-body>
+        <igx-expansion-panel-header>
+          <igx-expansion-panel-title>Title goes here...</igx-expansion-panel-title>
+          <igx-expansion-panel-description>Subtitle goes here...</igx-expansion-panel-description>
+        </igx-expansion-panel-header>
+      </igx-expansion-panel>
+      <igx-grid [data]="northwindEmployees" primaryKey="employeeID" displayDensity="cosy" [allowFiltering]="true" filterMode="excelStyleFilter" class="grid">
+        <igx-column field="lastName" dataType="string" header="lastName" [sortable]="true" [selectable]="false"></igx-column>
+        <igx-column field="employeeID" dataType="number" header="employeeID" [sortable]="true" [selectable]="false"></igx-column>
+        <igx-column field="firstName" dataType="string" header="firstName" [sortable]="true" [selectable]="false"></igx-column>
+        <igx-column field="title" dataType="string" header="title" [sortable]="true" [selectable]="false"></igx-column>
+        <igx-column field="titleOfCourtesy" dataType="string" header="titleOfCourtesy" [sortable]="true" [selectable]="false"></igx-column>
+        <igx-column field="birthDate" dataType="date" header="birthDate" [sortable]="true" [selectable]="false"></igx-column>
+        <igx-column field="hireDate" dataType="date" header="hireDate" [sortable]="true" [selectable]="false"></igx-column>
+        <igx-column field="address.street" dataType="string" header="address street" [sortable]="true" [selectable]="false"></igx-column>
+        <igx-column field="address.city" dataType="string" header="address city" [sortable]="true" [selectable]="false"></igx-column>
+        <igx-column field="address.region" dataType="string" header="address region" [sortable]="true" [selectable]="false"></igx-column>
+        <igx-column field="address.postalCode" dataType="string" header="address postalCode" [sortable]="true" [selectable]="false"></igx-column>
+        <igx-column field="address.country" dataType="string" header="address country" [sortable]="true" [selectable]="false"></igx-column>
+        <igx-column field="address.phone" dataType="string" header="address phone" [sortable]="true" [selectable]="false"></igx-column>
+        <igx-column field="managerID" dataType="number" header="managerID" [sortable]="true" [selectable]="false"></igx-column>
+        <igx-column field="notes" dataType="string" header="notes" [sortable]="true" [selectable]="false"></igx-column>
+        <igx-column field="avatarUrl" dataType="string" header="avatarUrl" [sortable]="true" [selectable]="false"></igx-column>
+      </igx-grid>
+    </div>
+    <igx-tree class="tree">
+      <igx-tree-node [expanded]="true">
+        <igx-tree-node [expanded]="true">
+          Figma
+        </igx-tree-node>
+        <igx-tree-node [expanded]="true">
+          Adobe XD
+        </igx-tree-node>
+        <igx-tree-node [expanded]="true">
+          Sketch
+        </igx-tree-node>
+        Design
+      </igx-tree-node>
+      <igx-tree-node [expanded]="true">
+        <igx-tree-node [expanded]="true">
+          Angular
+        </igx-tree-node>
+        <igx-tree-node [expanded]="true">
+          Blazor
+        </igx-tree-node>
+        <igx-tree-node [expanded]="true">
+          Web components
+        </igx-tree-node>
+        Development
+      </igx-tree-node>
+    </igx-tree>
+    <div class="column-layout group_3">
+      <div class="row-layout group_4">
+        <button igxButton="raised" igxRipple class="button_1">
+          Button
+        </button>
+        <button igxButton="outlined" igxRipple class="button_1">
+          Button
+        </button>
+        <button igxButton="flat" igxRipple [igxToggleAction]="dropdown" class="button_1">
+          <span>Button</span>
+          <igx-icon>
+            add
+          </igx-icon>
+        </button>
+        <button igxButton="fab" igxRipple class="user-input_1">
+          <igx-icon>
+            add
+          </igx-icon>
+        </button>
+        <button igxButton="icon" igxRipple>
+          <igx-icon>
+            email
+          </igx-icon>
+        </button>
+        <igx-avatar icon="people" [roundShape]="true" class="avatar"></igx-avatar>
+        <igx-chip class="chip">
+          <igx-prefix>
+            <igx-icon class="icon">
+              place
+            </igx-icon>
+          </igx-prefix>
+          Country
+        </igx-chip>
+        <igx-icon class="icon_1">
+          mail
+        </igx-icon>
+        <igx-drop-down #dropdown class="dropdown">
+          <igx-drop-down-item>
+            Option
+          </igx-drop-down-item>
+        </igx-drop-down>
+      </div>
+      <igx-buttongroup class="user-input">
+        <button igxButton="flat" igxRipple>
+          Button
+        </button>
+        <button igxButton="flat" igxRipple>
+          Button
+        </button>
+        <button igxButton="flat" igxRipple>
+          Button
+        </button>
+      </igx-buttongroup>
+      <div class="row-layout group_5">
+        <igx-checkbox labelPosition="after" class="user-input_1">
+          Label
+        </igx-checkbox>
+        <igx-switch class="user-input_1">
+          Label
+        </igx-switch>
+      </div>
+      <igx-radio-group class="user-input_1">
+        <igx-radio class="radio">
+          Label
+        </igx-radio>
+        <igx-radio class="radio">
+          Label
+        </igx-radio>
+        <igx-radio class="radio">
+          Label
+        </igx-radio>
+      </igx-radio-group>
+      <igc-rating size="large" [(ngModel)]="value" class="user-input_1"></igc-rating>
+      <igx-slider [value]="0" [minValue]="0" [maxValue]="100" [step]="10" [secondaryTickLabels]="false" class="slider"></igx-slider>
+    </div>
+    <igx-list class="list">
+      <igx-list-item [isHeader]="false">
+        <span igxListThumbnail>
+          <igx-avatar icon="person" [roundShape]="true" class="avatar"></igx-avatar>
+        </span>
+        <span igxListLineTitle>Title goes here</span>
+        <span igxListLineSubTitle>Subtitle...</span>
+        <span igxListAction>
+          <igx-icon class="icon_1">
+            star
+          </igx-icon>
+        </span>
+      </igx-list-item>
+      <igx-list-item [isHeader]="false">
+        <span igxListThumbnail>
+          <igx-avatar icon="person" [roundShape]="true" class="avatar"></igx-avatar>
+        </span>
+        <span igxListLineTitle>Title goes here</span>
+        <span igxListLineSubTitle>Subtitle...</span>
+        <span igxListAction>
+          <igx-icon class="icon_1">
+            star
+          </igx-icon>
+        </span>
+      </igx-list-item>
+      <igx-list-item [isHeader]="false">
+        <span igxListThumbnail>
+          <igx-avatar icon="person" [roundShape]="true" class="avatar"></igx-avatar>
+        </span>
+        <span igxListLineTitle>Title goes here</span>
+        <span igxListLineSubTitle>Subtitle...</span>
+        <span igxListAction>
+          <igx-icon class="icon_1">
+            star
+          </igx-icon>
+        </span>
+      </igx-list-item>
+      <igx-list-item [isHeader]="false">
+        <span igxListThumbnail>
+          <igx-avatar icon="person" [roundShape]="true" class="avatar"></igx-avatar>
+        </span>
+        <span igxListLineTitle>Title goes here</span>
+        <span igxListLineSubTitle>Subtitle...</span>
+        <span igxListAction>
+          <igx-icon class="icon_1">
+            star
+          </igx-icon>
+        </span>
+      </igx-list-item>
+      <igx-list-item [isHeader]="false">
+        <span igxListThumbnail>
+          <igx-avatar icon="person" [roundShape]="true" class="avatar"></igx-avatar>
+        </span>
+        <span igxListLineTitle>Title goes here</span>
+        <span igxListLineSubTitle>Subtitle...</span>
+        <span igxListAction>
+          <igx-icon class="icon_1">
+            star
+          </igx-icon>
+        </span>
+      </igx-list-item>
+      <igx-list-item [isHeader]="false">
+        <span igxListThumbnail>
+          <igx-avatar icon="person" [roundShape]="true" class="avatar"></igx-avatar>
+        </span>
+        <span igxListLineTitle>Title goes here</span>
+        <span igxListLineSubTitle>Subtitle...</span>
+        <span igxListAction>
+          <igx-icon class="icon_1">
+            star
+          </igx-icon>
+        </span>
+      </igx-list-item>
+    </igx-list>
+    <div class="column-layout group_6">
+      <igx-combo type="border" [data]="financialBoxOfficeRevenue" valueKey="Franchise" displayKey="Franchise" [filterable]="true" [autoFocusSearch]="true" class="user-input"></igx-combo>
+      <igx-date-picker type="border" mode="dialog" class="date-picker">
+        <label igxLabel>Date</label>
+      </igx-date-picker>
+      <igx-input-group type="border" class="user-input">
+        <input type="text" igxInput />
+        <label igxLabel>Label/Placeholder</label>
+      </igx-input-group>
+      <igx-select type="border" class="user-input">
+        <igx-select-item value="Option">
+          Option
+        </igx-select-item>
+      </igx-select>
+      <igx-input-group type="border" class="igx-typography__body-1 textarea">
+        <label igxLabel>Label/Placeholder</label>
+        <textarea igxInput></textarea>
+      </igx-input-group>
+    </div>
+  </div>
+  <div class="row-layout group_7">
+    <igx-tabs [disableAnimation]="true" class="tabs">
+      <igx-tab-item [selected]="true" class="tab-item">
+        <igx-tab-header>
+          <igx-icon igxTabHeaderIcon>info</igx-icon>
+          <span igxTabHeaderLabel>Label</span>
+        </igx-tab-header>
+        <igx-tab-content class="row-layout tab-item-content">
+          <img src="https://images.unsplash.com/photo-1503259901638-6bf44a4cd670?ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODR8fGNvbG9yZnVsJTIwYWJzdHJhY3QlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" class="image_1" />
+        </igx-tab-content>
+      </igx-tab-item>
+      <igx-tab-item class="tab-item">
+        <igx-tab-header>
+          <igx-icon igxTabHeaderIcon>info</igx-icon>
+          <span igxTabHeaderLabel>Label</span>
+        </igx-tab-header>
+        <igx-tab-content class="row-layout tab-item-content"></igx-tab-content>
+      </igx-tab-item>
+    </igx-tabs>
+    <igx-accordion [singleBranchExpand]="false" class="accordion">
+      <igx-expansion-panel>
+        <igx-expansion-panel-body>
+          <p class="content">
+            Body 1
+          </p>
+        </igx-expansion-panel-body>
+        <igx-expansion-panel-header>
+          <igx-expansion-panel-title>Title goes here...</igx-expansion-panel-title>
+        </igx-expansion-panel-header>
+      </igx-expansion-panel>
+      <igx-expansion-panel>
+        <igx-expansion-panel-body>
+          <p class="content">
+            Body 1
+          </p>
+        </igx-expansion-panel-body>
+        <igx-expansion-panel-header>
+          <igx-expansion-panel-title>Title goes here...</igx-expansion-panel-title>
+        </igx-expansion-panel-header>
+      </igx-expansion-panel>
+      <igx-expansion-panel>
+        <igx-expansion-panel-body>
+          <p class="content">
+            Body 1
+          </p>
+        </igx-expansion-panel-body>
+        <igx-expansion-panel-header>
+          <igx-expansion-panel-title>Title goes here...</igx-expansion-panel-title>
+        </igx-expansion-panel-header>
+      </igx-expansion-panel>
+    </igx-accordion>
+    <igx-calendar [hasHeader]="true" [vertical]="false" class="calendar"></igx-calendar>
+    <div class="column-layout group_8">
+      <h1 class="content">
+        Heading
+      </h1>
+      <h2 class="content">
+        Heading
+      </h2>
+      <h3 class="content">
+        Heading
+      </h3>
+      <h4 class="content">
+        Heading
+      </h4>
+      <h5 class="content">
+        Heading
+      </h5>
+      <h6 class="content">
+        Heading
+      </h6>
+      <p class="igx-typography__subtitle-1 content">
+        Heading
+      </p>
+      <p class="igx-typography__subtitle-2 content">
+        Heading
+      </p>
+      <p class="content">
+        Body 1
+      </p>
+      <p class="igx-typography__body-2 content">
+        Body 1
+      </p>
+      <p class="igx-typography__caption content">
+        Body 1
+      </p>
+      <p class="igx-typography__overline content">
+        Body 1
+      </p>
+      <a target="_blank" class="igx-typography__body-2 content">
+        This is a link
+      </a>
+      <a target="_blank" class="igx-typography__body-1 content">
+        This is a link
+      </a>
+    </div>
+  </div>
+</div>
