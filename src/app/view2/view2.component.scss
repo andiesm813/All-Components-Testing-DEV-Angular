@@ -1,0 +1,14 @@
+:host {
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+}
+.radio-group {
+  width: max-content;
+  height: max-content;
+}
+.radio {
+  padding: 8px;
+}
